@@ -174,7 +174,7 @@ section {
   right: 10px;
   left: -10px;
   background: linear-gradient(180deg,rgba(239, 139, 138, 0.8) 0%,rgba(229, 207, 130, 0.8) 100%);
-  transition: 2s;
+  transition: opacity .5s;
 }
 .social li {
   width: 57px;
@@ -196,7 +196,8 @@ section {
   display: flex;
   width: auto;
 }
-.member-photo:hover::before {
+.member-photo:hover::before,
+.member-photo:hover > .social {
   opacity: 1;
 }
 .social {
@@ -207,10 +208,12 @@ section {
   position: absolute;
   transform: translate(-50%, -50%);
   opacity: 0;
+  transition: opacity .5s;
 }
 /* footer */
 footer {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   border-top: 1px solid #b6b6b6;
   padding-top: 10px;
