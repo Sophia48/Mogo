@@ -29,11 +29,11 @@ footer {
   max-width: 100%;
   width: 1200px;
   margin: 0 auto;
-  padding: 35px 0;
+  padding: 35px 0;                              
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+     
 }
 @media (max-width: 1200px) {
 .header {
@@ -55,7 +55,7 @@ footer {
   color: #95e1d3;
 }
 .nav-menu {
-  list-style: none; /*???? */
+  list-style: none; 
   display: flex;
 }
 @media (max-width: 425px) {
@@ -73,6 +73,7 @@ footer {
   .nav-menu li {
      text-align: center;
      margin: 30px 0;
+     margin-left: 0!important;
      
   }
   .menu input:checked ~ .nav-menu  {
@@ -109,7 +110,6 @@ footer {
     top: -10px;
     transition: transform .5s;
   }
-
   }
   label span::after {
     content: '';
@@ -121,7 +121,7 @@ footer {
     top: 10px;
     transition: transform .5s;
   }
-  }
+  
   .menu input:checked ~ label span {
     transform: rotate(-90deg);
   }
@@ -130,7 +130,7 @@ footer {
     top: 0;
     transform: rotate(90deg);
   }
-}
+
 
 .nav-menu li {
   margin-left: 55px;
@@ -232,12 +232,14 @@ section {
 }
 .members {
   display: flex;
-  flex-wrap: wrap;
 }
 @media (max-width: 1200px) {
   .members,
   .section-title {
     padding:0 30px;
+  }
+  .members {
+    flex-wrap: wrap;
   }
   }
 .member-profile {
@@ -302,13 +304,14 @@ section {
 }
 .social a {
   display: flex;
-  height: 100px;
+  height: 100%;
   align-items: center;
   justify-content: center;
 }
 .member-profile .social img {
   height: 26px;
   display: flex;
+  align-items: center;
   width: auto;
 }
 .member-photo:hover::before,
@@ -354,7 +357,7 @@ footer {
 @media (max-width: 320px) {
   form {
      width: 100%;
-     flex-direction: column;
+       flex-direction: column;                                                                                                                           /*!!!!1 */
   }
   input {
     margin-bottom: 15px;
@@ -362,7 +365,7 @@ footer {
 }
 
 footer p {
-  font-family: Montserrat;
+  font-family: 'Montserrat' sans-serif;
   font-weight: normal;
   font-size: 14px;
   line-height: 17px;
